@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مصر التعليمية | EDU Platform</title>
+
+    <!-- خطوط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="contact-info">
+            <span id="contact-email">E-mail: info@egyedu.com</span>
+            <span id="contact-phone">Contact: 002 0123456789</span>
+            <span id="contact-address">Address: Cairo, Egypt</span>
+        </div>
+        
+        <nav class="navbar">
+            <!-- الأزرار واللغة -->
+            <div class="auth-group">
+                <div class="auth-buttons">
+                    <a href="#" class="btn-secondary auth-login">تسجيل الدخول</a>
+                    <a href="subscriptions.html" target="_blank" class="btn-primary auth-subscribe">اشترك الآن</a>
+                </div>
+                <div class="lang-toggle">
+                    <button id="lang-btn" aria-label="Toggle language to English">EN</button>
+                </div>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-home">الرئيسية</a></li> 
+                <li class="dropdown-menu-item">
+                    <a href="program_template.html?program=heroes" target="_blank" class="nav-programs dropdown-trigger">
+                        برامج ابطالنا
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="behavior.html" target="_blank">
+                                <i class="fas fa-heart"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال السلوك والقيم</strong>
+                                    <span>تنمية السلوك والذوق والقيم</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cognitive.html" target="_blank">
+                                <i class="fas fa-brain"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات المعرفية</strong>
+                                    <span>التفكير والتحليل وحل المشكلات</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="language.html" target="_blank">
+                                <i class="fas fa-comments"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال اللغة والتخاطب</strong>
+                                    <span>النمو اللغوي والتعبير والاتصال</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="academic.html" target="_blank">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات الأكاديمية</strong>
+                                    <span>القراءة والكتابة والحساب</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="guidance.html" target="_blank" class="nav-guidance">خدمات الأرشاد الأسري</a></li>
+                <li><a href="support.html" target="_blank" class="nav-support">خدمات الدعم</a></li>
+                <li><a href="about.html" target="_blank" class="nav-about">من نحن</a></li>
+                <li><a href="subscriptions.html" target="_blank" class="nav-subscriptions">الإشتراكات</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-contact">تواصل معنا</a></li>
+                <li><a href="faq.html" class="nav-faq">س و ج</a></li>
+            </ul>
+
+            <!-- الشعار -->
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار EDU"> 
+                <span class="logo-text"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="subscriptions-page">
+        
+        <section class="pricing-plans-section">
+            <h2 class="pricing-title fade-in">باقات الإشتراك الشهري</h2>
+            <p class="pricing-subtitle">
+                اختر الخيار المناسب لتنمية طفلك أو احصل على عروض حصرية عند الاشتراك في أكثر من مجال
+            </p>
+
+            <h3 class="special-offers-title">العروض الخاصة</h3>
+
+            <div class="pricing-cards-container">
+                
+                <div class="pricing-card complete-plan best-value scale-up" style="--delay: 0.1s;">
+                    <div class="tag best-value-tag">الأفضل قيمة ⭐️</div>
+                    <h3 class="plan-name">الباقة الشاملة</h3>
+                    <p class="plan-desc">جميع المجالات الأربعة</p>
+                    <div class="plan-price">
+                        <span class="old-price">200 ج.م</span>
+                        <span class="current-price">150 ج.م</span>
+                    </div>
+                    <div class="plan-save">وفر 50 ج.م (25%)</div>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+
+                <div class="pricing-card special-offer-plan most-loved scale-up" style="--delay: 0.3s;">
+                    <div class="tag most-loved-tag">الأكثر حباً 💛</div>
+                    <h3 class="plan-name">عرض خاص</h3>
+                    <p class="plan-desc">اختر أي 3 مجالات معاً</p>
+                    <div class="plan-price">
+                        <span class="old-price">150 ج.م</span>
+                        <span class="current-price">120 ج.م</span>
+                    </div>
+                    <div class="plan-save">وفر 30 ج.م (20%)</div>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+
+                <div class="pricing-card free-offer-plan scale-up" style="--delay: 0.5s;">
+                    <h3 class="plan-name">عرض مجاني</h3>
+                    <p class="plan-desc">اختر أي مجالين معاً</p>
+                    <div class="plan-price">
+                        <span class="old-price">99 ج.م</span>
+                        <span class="current-price">85 ج.م</span>
+                    </div>
+                    <div class="plan-save">وفر 15 ج.م (15%)</div>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+            </div>
+
+            <h3 class="individual-plans-title">أو اختر المجالات بشكل منفصل</h3>
+
+            <div class="individual-cards-container">
+                
+                <div class="individual-card slide-up" style="--delay: 0.1s;">
+                    <h4>مجال السلوك والقيم</h4>
+                    <p class="price-month">50 ج.م / شهرياً</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> غرس القيم وتنمية السلوك الإيجابي</li>
+                        <li><i class="fas fa-check-circle"></i> +50 سلوك إيجابي</li>
+                        <li><i class="fas fa-check-circle"></i> 3 مستويات</li>
+                        <li><i class="fas fa-check-circle"></i> قصص تفاعلية</li>
+                        <li><i class="fas fa-check-circle"></i> تطبيقات عملية</li>
+                    </ul>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+                
+                <div class="individual-card slide-up" style="--delay: 0.3s;">
+                    <h4>مجال المهارات المعرفية</h4>
+                    <p class="price-month">50 ج.م / شهرياً</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> الإنتياه والتركيز والتفكير الناقد</li>
+                        <li><i class="fas fa-check-circle"></i> 6 برامج تنموية</li>
+                        <li><i class="fas fa-check-circle"></i> 3 مستويات</li>
+                        <li><i class="fas fa-check-circle"></i> أنشطة اللعب الهادف</li>
+                        <li><i class="fas fa-check-circle"></i> متابعة التطور</li>
+                    </ul>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+
+                <div class="individual-card slide-up" style="--delay: 0.5s;">
+                    <h4>مجال اللغة والتخاطب</h4>
+                    <p class="price-month">50 ج.م / شهرياً</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> تطوير النطق والفهم السمعي </li>
+                        <li><i class="fas fa-check-circle"></i> 6 برامج متخصصة</li>
+                        <li><i class="fas fa-check-circle"></i> 3 مستويات</li>
+                        <li><i class="fas fa-check-circle"></i> إرشادات للأهل</li>
+                        <li><i class="fas fa-check-circle"></i> تدريبات تفاعلية</li>
+                    </ul>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+
+                <div class="individual-card slide-up" style="--delay: 0.7s;">
+                    <h4>مجال المهارات الأكاديمية</h4>
+                    <p class="price-month">50 ج.م / شهرياً</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> تعليم القراءة، الكتابة والحساب</li>
+                        <li><i class="fas fa-check-circle"></i> 6 برامج تعليمية</li>
+                        <li><i class="fas fa-check-circle"></i> 3 مستويات</li>
+                        <li><i class="fas fa-check-circle"></i> تقييمات دورية</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير متابعة</li>
+                    </ul>
+                    <a href="#registration-form-anchor" class="btn-primary subscribe-btn">إشترك الآن</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscription-form-section" id="registration-form-anchor">
+            <h2 class="form-title">📝 نموذج التسجيل وبدء الاشتراك</h2>
+            <form id="registration-form" class="registration-form slide-down">
+                <div class="form-group">
+                    <label for="fullName">الاسم الكامل لولي الأمر:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="childName">اسم الطفل/الطالب:</label>
+                    <input type="text" id="childName" name="childName" required>
+                </div>
+                 <div class="form-group">
+                    <label for="subPackage">اختر باقة الاشتراك:</label>
+                    <select id="subPackage" name="subPackage" required>
+                        <option value="">-- اختر الباقة التي تريدها --</option>
+                        <option value="complete">الباقة الشاملة (150 ج.م)</option>
+                        <option value="special">العروض الخاصة (120 ج.م)</option>
+                        <option value="free">عرض مجاني (85 ج.م)</option>
+                        <option value="behavior">مجال السلوك والقيم (50 ج.م)</option>
+                        <option value="cognitive">مجال تنمية المهارات المعرفية (50 ج.م)</option>
+                        <option value="language">مجال اللغة والتخاطب (50 ج.م)</option>
+                        <option value="academic">مجال المهارات الأكاديمية (50 ج.م)</option>
+                    </select>
+                </div>
+                <!-- Payment Section -->
+                <div class="payment-section">
+                    <h3>🔒 اختر طريقة الدفع الآمنة</h3>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-method vodafone" data-method="vodafone">
+                            <i class="fas fa-mobile-alt"></i>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="vodafone" required>
+                                فودافون كاش
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method visa" data-method="visa">
+                            <i class="fab fa-cc-visa"></i>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="visa">
+                                Visa
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method mastercard" data-method="mastercard">
+                            <i class="fab fa-cc-mastercard"></i>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="mastercard">
+                                Mastercard
+                            </label>
+                        </div>
+                        
+                        <div class="payment-method mada" data-method="mada">
+                            <i class="fas fa-credit-card"></i>
+                            <label>
+                                <input type="radio" name="paymentMethod" value="mada">
+                                مدى
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Vodafone Cash Details -->
+                    <div id="vodafone-details" class="payment-details">
+                        <h4 style="color: #e60000; margin-bottom: 15px;">تفاصيل الدفع بفودافون كاش</h4>
+                        <div class="form-group">
+                            <label for="vodafone-number">رقم فودافون كاش:</label>
+                            <input type="tel" id="vodafone-number" placeholder="01xxxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="vodafone-pin">كود التأكيد (PIN):</label>
+                            <input type="password" id="vodafone-pin" placeholder="أدخل كود التأكيد" maxlength="4">
+                        </div>
+                    </div>
+
+                    <!-- Card Details -->
+                    <div id="card-details" class="payment-details">
+                        <h4 style="color: #1a1f71; margin-bottom: 15px;">تفاصيل البطاقة</h4>
+                        <div class="form-group">
+                            <label for="card-number">رقم البطاقة:</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        <div class="card-input-group">
+                            <div class="form-group">
+                                <label for="card-name">اسم حامل البطاقة:</label>
+                                <input type="text" id="card-name" placeholder="الاسم كما يظهر على البطاقة">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-expiry">تاريخ الانتهاء:</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvv">CVV:</label>
+                                <input type="password" id="card-cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Summary -->
+                    <div class="payment-summary">
+                        <h4>ملخص الدفع</h4>
+                        <p id="selected-package">لم يتم اختيار باقة بعد</p>
+                        <div class="total-amount" id="total-amount">0 ج.م</div>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">✅ الدفع آمن ومشفر بالكامل</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary form-submit-btn">تأكيد التسجيل والانتقال للدفع</button>
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-column footer-about">
+                <div class="logo-footer">
+                    <img src="images/logo22.jpg" alt="شعار المنصة التعليمية">
+                    <div class="logo-text">منصة مصر التعليمية</div>
+                </div>
+                <p class="footer-description-text">نقدم برامج تعليمية وإرشاد أسري متكاملة لمستقبل أفضل لأطفالنا. انضم إلينا اليوم!</p>
+                
+                <div class="social-icons-footer">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>روابط أساسية</h4>
+                <div class="links-group">
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">برامج أبطالنا</a></li>
+                        <li><a href="#">خدمات الإرشاد الأسري</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">الاشتراكات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الأسئلة الشائعة (س&ج)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column footer-subscribe">
+                <h4>انضم لرسائلنا المميزة</h4>
+                <p>اكتشف آخر العروض والمقالات التعليمية المفيدة.</p>
+                <form action="#" method="POST" class="subscribe-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn-secondary-footer">اشترك الآن</button> 
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> منصة مصر التعليمية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مصر التعليمية | EDU Platform</title>
+
+    <!-- خطوط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="contact-info">
+            <span id="contact-email">E-mail: info@egyedu.com</span>
+            <span id="contact-phone">Contact: 002 0123456789</span>
+            <span id="contact-address">Address: Cairo, Egypt</span>
+        </div>
+        
+        <nav class="navbar">
+            <!-- الأزرار واللغة -->
+            <div class="auth-group">
+                <div class="auth-buttons">
+                    <a href="#" class="btn-secondary auth-login">تسجيل الدخول</a>
+                    <a href="subscriptions.html" target="_blank" class="btn-primary auth-subscribe">اشترك الآن</a>
+                </div>
+                <div class="lang-toggle">
+                    <button id="lang-btn" aria-label="Toggle language to English">EN</button>
+                </div>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-home">الرئيسية</a></li> 
+                <li class="dropdown-menu-item">
+                    <a href="program_template.html?program=heroes" target="_blank" class="nav-programs dropdown-trigger">
+                        برامج ابطالنا
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="behavior.html" target="_blank">
+                                <i class="fas fa-heart"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال السلوك والقيم</strong>
+                                    <span>تنمية السلوك والذوق والقيم</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cognitive.html" target="_blank">
+                                <i class="fas fa-brain"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات المعرفية</strong>
+                                    <span>التفكير والتحليل وحل المشكلات</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="language.html" target="_blank">
+                                <i class="fas fa-comments"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال اللغة والتخاطب</strong>
+                                    <span>النمو اللغوي والتعبير والاتصال</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="academic.html" target="_blank">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات الأكاديمية</strong>
+                                    <span>القراءة والكتابة والحساب</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="guidance.html" target="_blank" class="nav-guidance">خدمات الأرشاد الأسري</a></li>
+                <li><a href="support.html" target="_blank" class="nav-support">خدمات الدعم</a></li>
+                <li><a href="about.html" target="_blank" class="nav-about">من نحن</a></li>
+                <li><a href="subscriptions.html" target="_blank" class="nav-subscriptions">الإشتراكات</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-contact">تواصل معنا</a></li>
+                <li><a href="faq.html" class="nav-faq">س و ج</a></li>
+            </ul>
+
+            <!-- الشعار -->
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار EDU"> 
+                <span class="logo-text"></span>
+            </div>
+        </nav>
+    </header>
+
+<!-- 
+    ملف: behavior.html
+    صفحة السلوك والقصص (50 قصة - 10 قصص في كل صفحة)
+    بدون Header أو Footer
+-->
+
+    <main class="stories-page">
+        
+        <!-- عنوان الصفحة -->
+        <section class="page-header">
+            <h1 class="main-title">السلوك وتعليم القيم</h1>
+            <p class="subtitle">نغرس في أطفالنا مبادئ السلوك الصحيح عبر 50 قصة تفاعلية تغطي السلوكيات الإيجابية</p>
+        </section>
+
+        <!-- الفيديو التعريفي -->
+        <section class="intro-video-section">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                    title="فيديو تعريفي - السلوك والقيم"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- القصص -->
+        <section class="stories-section">
+            
+            <!-- الصفحة الأولى: القصص من 1 إلى 10 -->
+            <div class="stories-page-content active" data-page="1">
+                
+                <!-- القصة 1 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-1.jpg" alt="آداب الطعام والشراب">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">آداب الطعام والشراب</h3>
+                            <p class="story-summary">
+                                قصة تعليمية ممتعة تعلم الطفل الطريقة الصحيحة لتناول الطعام، 
+                                والآداب الواجب اتباعها على المائدة، مثل غسل اليدين والبسملة والأكل باليد اليمنى.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما هي اداب الطعام ولماذا نغسل ايدينا
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 2 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-2.jpg" alt="النظافة الشخصية">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">النظافة الشخصية</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل من خلال هذه القصة أهمية النظافة الشخصية اليومية، 
+                                من غسل الأسنان والاستحمام والعناية بالملابس، ليكون دائماً نظيفاً ومرتباً.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا النظافة مهمة؟ متى نغسل أيدينا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 3 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-3.jpg" alt="احترام الوالدين">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام الوالدين</h3>
+                            <p class="story-summary">
+                                قصة مؤثرة تعلم الطفل قيمة احترام الوالدين وطاعتهما، 
+                                وكيفية التعبير عن الحب والتقدير لهما بالكلام الطيب والأفعال الحسنة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نحترم والدينا؟ ماذا نقول عند طلب شيء؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 4 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-4.jpg" alt="آداب الحديث والاستئذان">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">آداب الحديث والاستئذان</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية الاستئذان قبل الدخول والتحدث بأدب، 
+                                وعدم المقاطعة، واستخدام الكلمات اللطيفة مثل "من فضلك" و"شكراً" و"عفواً".
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> متى نستأذن؟ ما هي الكلمات المهذبة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 5 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-5.jpg" alt="برّ الجيران">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">برّ الجيران</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية الجار وحقوقه، وكيفية التعامل معه بلطف، 
+                                ومساعدته عند الحاجة، والحفاظ على علاقة طيبة مع الجيران.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> من هو الجار؟ كيف نساعد الجيران؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 6 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-6.jpg" alt="الصدق والأمانة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الصدق والأمانة</h3>
+                            <p class="story-summary">
+                                قصة تربوية تعلم الطفل قيمة الصدق في القول والفعل، 
+                                والأمانة في حفظ الأشياء وردها لأصحابها، وأن الكذب يؤدي إلى مشاكل كثيرة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما معنى الصدق؟ لماذا الأمانة مهمة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 7 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-7.jpg" alt="التعاون والمشاركة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التعاون والمشاركة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل من هذه القصة أهمية التعاون مع الآخرين، 
+                                ومشاركة الألعاب والأدوات مع الأصدقاء، وكيف أن العمل الجماعي يحقق نتائج أفضل.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نتعاون؟ كيف نشارك الألعاب؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 8 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-8.jpg" alt="احترام المعلمين">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام المعلمين</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية احترام المعلم وتقديره، 
+                                والاستماع له بانتباه، واتباع تعليماته، وشكره على جهوده في التعليم.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نحترم المعلم؟ كيف نتصرف في الصف؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 9 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-9.jpg" alt="الالتزام في المدرسة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الالتزام في المدرسة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية الوصول في الوقت المحدد، 
+                                وإحضار الأدوات المدرسية، وأداء الواجبات، والالتزام بقوانين المدرسة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نلتزم بالمواعيد؟ ما هي قوانين المدرسة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 10 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-10.jpg" alt="النظام والترتيب">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">النظام والترتيب</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية ترتيب الغرفة والأغراض الشخصية، 
+                                ووضع كل شيء في مكانه الصحيح، والحفاظ على النظام في البيت والمدرسة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا النظام مهم؟ كيف نرتب غرفتنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- الصفحة الثانية: القصص من 11 إلى 20 -->
+            <div class="stories-page-content" data-page="2">
+                
+                <!-- القصة 11 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-11.jpg" alt="مساعدة كبار السن">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">مساعدة كبار السن</h3>
+                            <p class="story-summary">
+                                قصة مؤثرة تعلم الطفل احترام كبار السن ومساعدتهم في حمل الأغراض والجلوس في المواصلات،
+                                وتقديم العون لهم في الأماكن العامة، وأن رعايتهم واجب ديني وأخلاقي.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نساعد كبار السن؟ لماذا نحترمهم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 12 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-12.jpg" alt="الحفاظ على الممتلكات العامة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الحفاظ على الممتلكات العامة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية المحافظة على المرافق العامة كالحدائق والمدارس والمستشفيات،
+                                وعدم الكتابة على الجدران أو إتلاف الممتلكات، وأن هذه الأماكن ملك للجميع.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما هي الممتلكات العامة؟ كيف نحافظ عليها؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 13 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-13.jpg" alt="آداب استخدام الهاتف">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">آداب استخدام الهاتف</h3>
+                            <p class="story-summary">
+                                قصة تعليمية عن الطريقة الصحيحة للرد على الهاتف والتحدث بأدب،
+                                وعدم الإزعاج أثناء المكالمات، واستخدام الهاتف في الأوقات المناسبة فقط.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نرد على الهاتف؟ متى نستخدم الهاتف؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 14 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-14.jpg" alt="آداب الطريق والمرور">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">آداب الطريق والمرور</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل قواعد المرور الأساسية مثل عبور الطريق من الأماكن المخصصة،
+                                والانتباه لإشارات المرور، وعدم اللعب في الشارع، للحفاظ على سلامته.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نعبر الطريق بأمان؟ ما معنى الإشارات؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 15 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-15.jpg" alt="ضبط النفس وقت الغضب">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">ضبط النفس وقت الغضب</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل كيفية التحكم في مشاعر الغضب والتعبير عنها بطريقة صحية،
+                                وتقنيات التهدئة مثل التنفس العميق والعد حتى عشرة قبل الرد.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ماذا نفعل عند الغضب؟ كيف نهدئ أنفسنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 16 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-16.jpg" alt="التواضع">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التواضع</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية التواضع وعدم التكبر على الآخرين،
+                                وأن التواضع من صفات الناجحين، وأن الغرور يبعد الناس عنه.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما معنى التواضع؟ لماذا التواضع مهم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 17 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-17.jpg" alt="الاعتذار عند الخطأ">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الاعتذار عند الخطأ</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية الاعتراف بالخطأ والاعتذار بصدق،
+                                وأن قول "آسف" ليس ضعفاً بل شجاعة، وأن الاعتذار يصلح العلاقات.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> متى نعتذر؟ كيف نقول آسف بصدق؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 18 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-18.jpg" alt="حب الوطن">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">حب الوطن</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل معنى حب الوطن والانتماء له، والحفاظ على نظافته وجماله،
+                                واحترام رموزه، والفخر بتاريخه وثقافته، والعمل على تطويره.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نحب وطننا؟ ما واجبنا تجاه الوطن؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 19 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-19.jpg" alt="احترام الآخر">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام الآخر</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل احترام آراء ومشاعر الآخرين حتى لو اختلفوا معه،
+                                والاستماع لهم باهتمام، وعدم السخرية منهم، وتقبل الاختلاف.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نحترم الآخرين؟ لماذا الاحترام مهم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 20 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-20.jpg" alt="الصبر والاجتهاد">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الصبر والاجتهاد</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أن النجاح يحتاج إلى صبر واجتهاد مستمر،
+                                وأن الاستسلام ليس حلاً، وأن المثابرة والعمل الجاد يؤديان إلى تحقيق الأهداف.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نصبر؟ كيف نجتهد في دروسنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- الصفحة الثالثة: القصص من 21 إلى 30 -->
+            <div class="stories-page-content" data-page="3">
+                
+                <!-- القصة 21 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-21.jpg" alt="الشكر والعرفان">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الشكر والعرفان</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية شكر الآخرين على معروفهم والتعبير عن الامتنان،
+                                وأن كلمة "شكراً" البسيطة لها تأثير كبير في نفوس الناس.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> متى نقول شكراً؟ لماذا الشكر مهم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 22 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-22.jpg" alt="العطاء والعمل الجماعي">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">العطاء والعمل الجماعي</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية العمل ضمن فريق والعطاء دون انتظار مقابل،
+                                وأن التعاون الجماعي يحقق إنجازات أكبر من العمل الفردي.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما فوائد العمل الجماعي؟ كيف نعطي؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 23 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-23.jpg" alt="احترام الوقت">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام الوقت</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل قيمة الوقت وأهمية احترام مواعيده والالتزام بها،
+                                وتنظيم وقته بين الدراسة واللعب والراحة لتحقيق التوازن.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا الوقت مهم؟ كيف ننظم وقتنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 24 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-24.jpg" alt="التفاعل الإيجابي في الأنشطة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التفاعل الإيجابي في الأنشطة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية المشاركة الفعالة في الأنشطة المدرسية والرياضية،
+                                والتفاعل بحماس وإيجابية، وتشجيع زملائه على المشاركة أيضاً.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نشارك في الأنشطة؟ كيف نتفاعل بإيجابية؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 25 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-25.jpg" alt="تقبل النقد">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">تقبل النقد</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل كيفية تقبل النقد البناء دون انزعاج،
+                                والاستفادة منه لتطوير نفسه، وأن النقد يساعدنا على التحسن والنمو.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما معنى النقد البناء؟ كيف نستفيد منه؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 26 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-26.jpg" alt="الاهتمام بالبيئة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الاهتمام بالبيئة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية الحفاظ على البيئة ونظافتها، وعدم رمي القمامة في الشارع،
+                                وإعادة التدوير، وزراعة الأشجار، لنترك عالماً أفضل للأجيال القادمة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نحافظ على البيئة؟ لماذا البيئة مهمة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 27 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-27.jpg" alt="تجنب التنمر">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">تجنب التنمر</h3>
+                            <p class="story-summary">
+                                قصة مهمة تعلم الطفل أضرار التنمر وأهمية الوقوف ضده،
+                                وعدم السخرية من الآخرين أو إيذائهم، ومساعدة من يتعرض للتنمر.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما هو التنمر؟ كيف نساعد من يتعرض للتنمر؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 28 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-28.jpg" alt="الحفاظ على الخصوصية">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الحفاظ على الخصوصية</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية احترام خصوصية الآخرين وعدم التطفل على شؤونهم،
+                                والحفاظ على معلوماته الشخصية، وأن لكل شخص حياة خاصة يجب احترامها.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما معنى الخصوصية؟ كيف نحترم خصوصية الآخرين؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 29 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-29.jpg" alt="التعاون مع الأسرة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التعاون مع الأسرة</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية المشاركة في الأعمال المنزلية ومساعدة العائلة،
+                                وأن التعاون الأسري يقوي الروابط ويجعل الحياة أسهل وأجمل للجميع.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نساعد في البيت؟ لماذا التعاون مهم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 30 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-30.jpg" alt="التعبير عن المشاعر بشكل صحي">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التعبير عن المشاعر بشكل صحي</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل كيفية التعبير عن مشاعره بطريقة صحيحة وبناءة،
+                                سواء كانت فرحاً أو حزناً أو خوفاً، وأن التعبير عن المشاعر أمر طبيعي ومهم.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نعبر عن مشاعرنا؟ لماذا نتحدث عن مشاعرنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- الصفحة الرابعة: القصص من 31 إلى 40 -->
+            <div class="stories-page-content" data-page="4">
+                
+                <!-- القصة 31 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-31.jpg" alt="مساعدة الزملاء">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">مساعدة الزملاء</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية مساعدة زملائه في الدراسة واللعب وحل المشكلات،
+                                وأن مد يد العون للآخرين يبني صداقات قوية ويخلق بيئة إيجابية.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نساعد زملاءنا؟ ما فوائد المساعدة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 32 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-32.jpg" alt="احترام الاختلاف">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام الاختلاف</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أن الناس مختلفون في الشكل واللون والرأي وهذا أمر طبيعي،
+                                وأن التنوع يثري الحياة، ويجب احترام الجميع رغم اختلافاتهم.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نحترم الاختلاف؟ كيف نتعامل مع المختلفين؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 33 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-33.jpg" alt="آداب استخدام الإنترنت">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">آداب استخدام الإنترنت</h3>
+                            <p class="story-summary">
+                                قصة عصرية تعلم الطفل الاستخدام الآمن والأخلاقي للإنترنت،
+                                وحماية معلوماته الشخصية، وعدم نشر معلومات خاطئة أو مسيئة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نستخدم الإنترنت بأمان؟ ما الذي لا ننشره؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 34 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-34.jpg" alt="ترتيب الأدوات بعد اللعب">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">ترتيب الأدوات بعد اللعب</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل عادة ترتيب ألعابه وأدواته بعد الانتهاء من استخدامها،
+                                ووضعها في أماكنها المخصصة، للحفاظ عليها ولتسهيل إيجادها لاحقاً.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نرتب الألعاب؟ أين نضع الألعاب؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 35 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-35.jpg" alt="قول الحقيقة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">قول الحقيقة</h3>
+                            <p class="story-summary">
+                                قصة تؤكد على أهمية الصدق دائماً حتى لو كانت الحقيقة صعبة،
+                                وأن الكذب يؤدي إلى فقدان الثقة، بينما الصدق يبني السمعة الطيبة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نقول الحقيقة دائماً؟ ماذا يحدث عند الكذب؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 36 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-36.jpg" alt="احترام الأدوار">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام الأدوار</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية الانتظار في الدور وعدم التزاحم أو القفز على الآخرين،
+                                وأن احترام الأدوار يعكس تربيته الحسنة واحترامه للآخرين.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا ننتظر دورنا؟ كيف نحترم الأدوار؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 37 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-37.jpg" alt="اختيار الأصدقاء">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">اختيار الأصدقاء</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل كيفية اختيار الأصدقاء الجيدين الذين يؤثرون عليه إيجابياً،
+                                ويشجعونه على فعل الخير، ويساعدونه على التطور والنجاح.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نختار الأصدقاء؟ ما صفات الصديق الجيد؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 38 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-38.jpg" alt="الاعتناء بالحيوانات">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الاعتناء بالحيوانات</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل الرحمة بالحيوانات وعدم إيذائها أو إخافتها،
+                                وإطعامها ورعايتها، وأن الرفق بالحيوان من علامات الإنسانية.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> كيف نعتني بالحيوانات؟ لماذا نرحم الحيوانات؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 39 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-39.jpg" alt="احترام القوانين">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">احترام القوانين</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية احترام القوانين واللوائح في المدرسة والشارع والمجتمع،
+                                وأن القوانين موجودة لحمايتنا وتنظيم حياتنا وضمان حقوق الجميع.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا توجد القوانين؟ كيف نحترم القوانين؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 40 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-40.jpg" alt="المبادرة بالأعمال الطيبة">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">المبادرة بالأعمال الطيبة</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية المبادرة بفعل الخير دون انتظار أن يطلب منه أحد،
+                                ومساعدة الآخرين تلقائياً، وأن المبادرة الإيجابية تصنع الفرق.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما معنى المبادرة؟ كيف نبادر بالخير؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- الصفحة الخامسة: القصص من 41 إلى 50 -->
+            <div class="stories-page-content" data-page="5">
+                
+                <!-- القصة 41 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-41.jpg" alt="قول من فضلك وشكراً">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">قول "من فضلك" و"شكراً"</h3>
+                            <p class="story-summary">
+                                قصة تركز على أهمية الكلمات المهذبة في التعاملات اليومية،
+                                وكيف أن كلمات بسيطة مثل "من فضلك" و"شكراً" تجعل التواصل أجمل وأكثر احتراماً.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> متى نقول من فضلك؟ لماذا الكلمات المهذبة مهمة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 42 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-42.jpg" alt="الحفاظ على الهدوء داخل الصف">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الحفاظ على الهدوء داخل الصف</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية الهدوء والانضباط داخل الفصل الدراسي،
+                                وعدم إزعاج زملائه، والاستماع للمعلم بانتباه، ورفع اليد قبل التحدث.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نحافظ على الهدوء في الصف؟ كيف نتصرف في الحصة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 43 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-43.jpg" alt="التحكم في الانفعالات">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التحكم في الانفعالات</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل كيفية إدارة انفعالاته المختلفة بطريقة صحية،
+                                والتعامل مع الإحباط والضيق دون عنف أو بكاء شديد، والتعبير بهدوء.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong>كيف نسيطر على انفعالاتنا
+                                </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+                <!-- القصة 44 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-44.jpg" alt="التفكير قبل التصرف">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">التفكير قبل التصرف</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أهمية التفكير بعواقب الأفعال قبل القيام بها،
+                                وعدم التسرع في القرارات، وأن التروي يجنبنا الكثير من المشاكل والندم.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نفكر قبل التصرف؟ ماذا يحدث عند التسرع؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 45 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-45.jpg" alt="الالتزام بالواجبات">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الالتزام بالواجبات</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل أهمية أداء واجباته المدرسية والمنزلية في وقتها،
+                                وعدم التأجيل أو الإهمال، وأن المسؤولية تبدأ من الصغر بالالتزام.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نلتزم بواجباتنا؟ متى ننجز الواجبات؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 46 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-46.jpg" alt="مشاركة الألعاب">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">مشاركة الألعاب</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل فرحة مشاركة ألعابه مع الآخرين وعدم الأنانية،
+                                وأن المشاركة تجلب السعادة وتقوي الصداقات وتجعل اللعب أكثر متعة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نشارك ألعابنا؟ كيف تشعر عند المشاركة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 47 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-47.jpg" alt="احترام المعلمين">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">تقدير دور المعلم</h3>
+                            <p class="story-summary">
+                                قصة تعمق فهم الطفل لدور المعلم العظيم في بناء المجتمع،
+                                وتعلمه الاحترام العميق والتقدير الكبير للمعلمين وجهودهم المستمرة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما دور المعلم؟ كيف نظهر التقدير للمعلم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 48 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-48.jpg" alt="حب التعلم">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">حب التعلم</h3>
+                            <p class="story-summary">
+                                يتعلم الطفل أن العلم والتعلم مغامرة ممتعة لا تنتهي،
+                                وأن حب المعرفة يفتح أبواب النجاح، وأن التعلم ليس واجباً بل متعة ورحلة مستمرة.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> لماذا نحب التعلم؟ كيف يساعدنا العلم؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 49 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-49.jpg" alt="الثقة بالنفس دون غرور">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">الثقة بالنفس دون غرور</h3>
+                            <p class="story-summary">
+                                قصة تعلم الطفل التوازن بين الثقة بالنفس والتواضع،
+                                وأن يؤمن بقدراته دون التقليل من الآخرين، وأن الثقة الحقيقية تأتي من الداخل.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما الفرق بين الثقة والغرور؟ كيف نبني ثقتنا؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-divider"></div>
+                </div>
+
+                <!-- القصة 50 -->
+                <div class="story-item">
+                    <div class="story-content">
+                        <div class="story-image">
+                            <img src="images/story-50.jpg" alt="تكوين عادات إيجابية يومية">
+                        </div>
+                        <div class="story-details">
+                            <h3 class="story-title">تكوين عادات إيجابية يومية</h3>
+                            <p class="story-summary">
+                                القصة الختامية التي تجمع كل القيم، تعلم الطفل أهمية بناء روتين يومي صحي
+                                ومليء بالعادات الإيجابية التي تصنع منه شخصاً ناجحاً ومتوازناً ومسؤولاً.
+                            </p>
+                            <div class="story-questions">
+                                <strong>الأسئلة التفاعلية:</strong> ما هي عاداتك اليومية؟ كيف نكون عادات جيدة؟
+                            </div>
+                            <div class="story-actions">
+                                <div class="levels-box">
+                                    <button class="level-btn level-1">3-5 سنوات</button>
+                                    <button class="level-btn level-2">6-8 سنوات</button>
+                                    <button class="level-btn level-3">9-12 سنة</button>
+                                </div>
+                                <a href="#" class="btn-get-story">
+                                    <i class="fas fa-book-open"></i>
+                                    الحصول على القصة
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                
+
+        <!-- العداد للتنقل بين الصفحات -->
+        <section class="pagination-section">
+            <div class="pagination">
+                <button class="page-btn active" data-page="1">1</button>
+                <button class="page-btn" data-page="2">2</button>
+                <button class="page-btn" data-page="3">3</button>
+                <button class="page-btn" data-page="4">4</button>
+                <button class="page-btn" data-page="5">5</button>
+            </div>
+            <p class="pagination-info">الصفحة <span id="current-page-num">1</span> من 5 (عرض القصص <span id="stories-range">1-10</span> من 50)</p>
+        </section>
+
+        <!-- زر الاشتراك الكبير -->
+        <section class="subscribe-cta">
+            <a href="subscriptions.html" class="btn-subscribe-main">
+                <i class="fas fa-star"></i>
+                اشترك الآن واحصل على جميع القصص الـ 50
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-column footer-about">
+                <div class="logo-footer">
+                    <img src="images/logo22.jpg" alt="شعار المنصة التعليمية">
+                    <div class="logo-text">منصة مصر التعليمية</div>
+                </div>
+                <p class="footer-description-text">نقدم برامج تعليمية وإرشاد أسري متكاملة لمستقبل أفضل لأطفالنا. انضم إلينا اليوم!</p>
+                
+                <div class="social-icons-footer">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>روابط أساسية</h4>
+                <div class="links-group">
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">برامج أبطالنا</a></li>
+                        <li><a href="#">خدمات الإرشاد الأسري</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">الاشتراكات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الأسئلة الشائعة (س&ج)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column footer-subscribe">
+                <h4>انضم لرسائلنا المميزة</h4>
+                <p>اكتشف آخر العروض والمقالات التعليمية المفيدة.</p>
+                <form action="#" method="POST" class="subscribe-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn-secondary-footer">اشترك الآن</button> 
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> منصة مصر التعليمية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

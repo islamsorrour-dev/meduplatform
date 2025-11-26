@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة مصر التعليمية | EDU Platform</title>
+
+    <!-- خطوط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <!-- أيقونات السوشيال ميديا الجانبية الثابتة -->
+    <div class="floating-social">
+        <a href="#" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" class="youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+ <header class="main-header"></header>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="contact-info">
+            <span id="contact-email">E-mail: info@egyedu.com</span>
+            <span id="contact-phone">Contact: 002 0123456789</span>
+            <span id="contact-address">Address: Cairo, Egypt</span>
+        </div>
+        
+        <nav class="navbar">
+            <!-- الأزرار واللغة -->
+            <div class="auth-group">
+                <div class="auth-buttons">
+                    <a href="#" class="btn-secondary auth-login">تسجيل الدخول</a>
+                    <a href="subscriptions.html" target="_blank" class="btn-primary auth-subscribe">اشترك الآن</a>
+                </div>
+                                <button class="search-icon" aria-label="بحث">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="lang-toggle">
+                    <button id="lang-btn" aria-label="Toggle language to English">EN</button>
+                </div>
+            </div>
+
+            <!-- روابط التنقل -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-home">الرئيسية</a></li>
+                <li class="dropdown-menu-item">
+                    <a href="program_template.html?program=heroes" target="_blank" class="nav-programs dropdown-trigger">
+                        برامج ابطالنا
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="behavior.html" target="_blank">
+                                <i class="fas fa-heart"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال السلوك والقيم</strong>
+                                    <span>تنمية السلوك والذوق والقيم</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cognitive.html" target="_blank">
+                                <i class="fas fa-brain"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات المعرفية</strong>
+                                    <span>التفكير والتحليل وحل المشكلات</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="language.html" target="_blank">
+                                <i class="fas fa-comments"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال اللغة والتخاطب</strong>
+                                    <span>النمو اللغوي والتعبير والاتصال</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="academic.html" target="_blank">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div class="dropdown-item-text">
+                                    <strong>مجال المهارات الأكاديمية</strong>
+                                    <span>القراءة والكتابة والحساب</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="guidance.html" target="_blank" class="nav-guidance">خدمات الأرشاد الأسري</a></li>
+                <li><a href="support.html" target="_blank" class="nav-support">خدمات الدعم</a></li>
+                <li><a href="about.html" target="_blank" class="nav-about">من نحن</a></li>
+                <li><a href="subscriptions.html" target="_blank" class="nav-subscriptions">الإشتراكات</a></li>
+                <li><a href="contact.html" target="_blank" class="nav-contact">تواصل معنا</a></li>
+                <li><a href="faq.html" class="nav-faq">س و ج</a></li>
+            </ul>
+
+            <!-- الشعار -->
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار EDU"> 
+                <span class="logo-text"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section fade-in">
+        <div class="hero-images pulse">
+            <img src="images/hero-kids.png" alt="أطفال يبتسمون">
+        </div>
+
+        <!-- الأيقونات الطائرة المحيطة -->
+        <div class="floating-icons">
+            <!-- أيقونة يمين فوق -->
+            <div class="floating-icon -right">
+                <img src="images/icon-1.png" alt="Icon 1">
+            </div>
+            
+            <!-- أيقونة يسار فوق -->
+            <div class="floating-icon top-left">
+                <img src="images/icon-2.png" alt="Icon 2">
+            </div>
+            
+            <!-- أيقونة يمين تحت -->
+            <div class="floating-icon bottom-right">
+                <img src="images/icon-3.png" alt="Icon 3">
+            </div>
+
+            <!-- أيقونة يسار تحت -->
+            <div class="floating-icon bottom-left">
+                <img src="images/icon-4.png" alt="Icon 4">
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">منصة مصر التعليمية</h1>
+            <p class="hero-description">
+                تسعى إلى بناء جيل متكامل في علمه وسلوكه، يمتلك مهارات التفكير والتحليل 
+                والاتصال، ويتسم بالأدب والاحترام والمسؤولية، جيل ينهل من العلم بوعي، ويكتسب 
+                الأخلاق بالسلوك، ليكون نموذجًا لـ "الجيل المستقبلي المصري الواعد ...
+            </p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <h2 class="section-title fade-in">مجالات البرامج التعليمية</h2>
+        <div class="cards-container">
+
+            
+            <div class="course-card slide-up" style="--delay: 0.1s;">
+                <div class="card-image">
+                    <img src="images/card-1.jpeg" alt="مجال السلوك">
+                </div>
+                
+                <h3 class="card-title">مجال السلوك والقيم</h3>
+                <p class="card-text">
+                    مجال تنمية السلوك، والذوق والقيم القائمة على المهارات من خلال تعليم المهارات السلوكية والاجتماعية التي تخدم دور الوالدين والمدارس وأيضاً القيم والذوق العام والتعاملات الاجتماعية.
+                </p>
+                <div class="card-details">
+                    <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                </div>
+                <a href="behavior.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="course-card slide-up" style="--delay: 0.3s;">
+                <div class="card-image">
+                    <img src="images/card-2.jpeg" alt="مجال المهارات المعرفية">
+                </div>
+                <h3 class="card-title">مجال تنمية المهارات المعرفية</h3>
+                <p class="card-text">
+                    يهتم هذا المحور في تنمية المهارات الأكاديمية ومهارات التفكير والتحليل وحل المشكلات والقدرة على الفهم والاستيعاب، وإدارة الوقت والمهام.
+                </p>
+                <div class="card-details">
+                    <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                </div>
+                <a href="cognitive.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="course-card slide-up" style="--delay: 0.5s;">
+                <div class="card-image">
+                    <img src="images/card-3.jpeg" alt="مجال اللغة والتخاطب">
+                </div>
+                <h3 class="card-title">مجال اللغة والتخاطب</h3>
+                <p class="card-text">
+                    يهتم هذا المحور على النمو اللغوي الصحيح والدقيق والقدرة على تنمية مهارات التعبير والاتصال والتواصل لدى أبنائنا.
+                </p>
+                <div class="card-details">
+                    <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                </div>
+                <a href="language.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+
+            <div class="course-card slide-up" style="--delay: 0.7s;">
+                <div class="card-image">
+                    <img src="images/card-4.jpeg" alt="مجال المهارات الأكاديمية">
+                </div>
+                <h3 class="card-title">مجال المهارات الأكاديمية</h3>
+                <p class="card-text">
+                    يهتم المحور الأكاديمي على النمو في الجانب التعليمي والمهني، أي تنمية مهارات التعليم والقراءة والكتابة والحساب والمواد التعليمية المختلفة.
+                </p>
+                <div class="card-details">
+                    <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                </div>
+                <a href="academic.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            
+            <div class="footer-column footer-about">
+                <div class="logo-footer">
+                    <img src="images/logo22.jpg" alt="شعار المنصة التعليمية">
+                    <div class="logo-text">منصة مصر التعليمية</div>
+                </div>
+                <p class="footer-description-text">نقدم برامج تعليمية وإرشاد أسري متكاملة لمستقبل أفضل لأطفالنا. انضم إلينا اليوم!</p>
+                
+                <div class="social-icons-footer">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>روابط أساسية</h4>
+                <div class="links-group">
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">برامج أبطالنا</a></li>
+                        <li><a href="#">خدمات الإرشاد الأسري</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">الاشتراكات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الأسئلة الشائعة (س&ج)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column footer-subscribe">
+                <h4>انضم لرسائلنا المميزة</h4>
+                <p>اكتشف آخر العروض والمقالات التعليمية المفيدة.</p>
+                <form action="#" method="POST" class="subscribe-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn-secondary-footer">اشترك الآن</button> 
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2025</span> منصة مصر التعليمية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
