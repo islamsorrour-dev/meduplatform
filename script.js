@@ -837,3 +837,75 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// ------------------------------------------
+// FAQ Page Functionality
+// ------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    // FAQ Toggle (فتح وإغلاق الأسئلة)
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    if (faqQuestions.length > 0) {
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                faqItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    }
+    
+    // FAQ Search (البحث في الأسئلة)
+    const faqSearchInput = document.getElementById('faq-search');
+    const noResults = document.getElementById('no-results');
+    
+    if (faqSearchInput && faqItems.length > 0) {
+        faqSearchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount === 0 && searchTerm.length > 0) {
+                if (noResults) {
+                    noResults.classList.add('show');
+                }
+            } else {
+                if (noResults) {
+                    noResults.classList.remove('show');
+                }
+            }
+            
+            // If search is empty, show all items
+            if (searchTerm.length === 0) {
+                faqItems.forEach(item => {
+                    item.style.display = 'block';
+                });
+                if (noResults) {
+                    noResults.classList.remove('show');
+                }
+            }
+        });
+    }
+});

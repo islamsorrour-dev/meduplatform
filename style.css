@@ -2774,3 +2774,1224 @@ body {
         padding: 8px 15px;
     }
 }
+
+/* ========================================
+   About Page Styles
+======================================== */
+.about-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about-hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.about-hero .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.about-hero .logo-section img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.section-card h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-card h2 i {
+    color: var(--accent-color);
+}
+
+.section-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 30px 0 15px 0;
+}
+
+.section-card p {
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+.vision-mission-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.vision-mission-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.vision-mission-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.vision-mission-table tr:last-child td {
+    border-bottom: none;
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goals-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(123, 67, 151, 0.05);
+    border-right: 4px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+}
+
+.goals-list li i {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.methodology-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-right: 4px solid var(--primary-color);
+}
+
+.methodology-item h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.methodology-item h4 i {
+    color: var(--accent-color);
+}
+
+.methodology-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.reference-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reference-table th {
+    background: var(--secondary-color);
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.reference-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.reference-table tr:last-child td {
+    border-bottom: none;
+}
+
+.content-area-card {
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.05), rgba(220, 36, 48, 0.02));
+    padding: 25px;
+    border-radius: 15px;
+    border-top: 5px solid var(--primary-color);
+    margin: 20px 0;
+}
+
+.content-area-card h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-area-card h4 i {
+    color: var(--accent-color);
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.skills-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-table tr:last-child td {
+    border-bottom: none;
+}
+
+.skills-table td strong {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-card {
+        padding: 25px;
+    }
+
+    .section-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .vision-mission-table,
+    .reference-table,
+    .skills-table {
+        font-size: 0.9rem;
+    }
+
+    .methodology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero .logo-section {
+        flex-direction: column;
+    }
+}
+
+/* ========================================
+   Content Details Section (for academic, cognitive, language pages)
+======================================== */
+.content-details-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.content-details-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.content-details-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.content-details-title i {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+.content-intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.content-skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-skills-table thead th {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.content-skills-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+    line-height: 1.8;
+}
+
+.content-skills-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.content-skills-table tbody td strong {
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+}
+
+.content-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.content-features-list li {
+    padding: 18px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.05), rgba(220, 36, 48, 0.02));
+    border-right: 4px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.content-features-list li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.content-features-list li strong {
+    color: var(--primary-color);
+    margin-left: 5px;
+}
+
+.content-goals-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.goals-section,
+.methods-section {
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.05), rgba(220, 36, 48, 0.02));
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.goals-section h3,
+.methods-section h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.goals-section h3 i,
+.methods-section h3 i {
+    color: var(--accent-color);
+}
+
+.goals-section p,
+.methods-section p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content-details-card {
+        padding: 25px;
+    }
+
+    .content-details-title {
+        font-size: 1.5rem;
+    }
+
+    .content-skills-table {
+        font-size: 0.9rem;
+    }
+
+    .content-skills-table thead th,
+    .content-skills-table tbody td {
+        padding: 12px;
+    }
+
+    .content-features-list li {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .content-goals-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .goals-section,
+    .methods-section {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   Experts/Team Page Styles
+======================================== */
+.experts-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+    border-radius: 20px;
+}
+
+.page-header .main-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.page-header .subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 50px 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-title i {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+/* القيادة العليا */
+.leadership-section {
+    margin-bottom: 60px;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.leader-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.leader-card.featured {
+    border: 3px solid var(--primary-color);
+}
+
+.leader-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.1);
+}
+
+.leader-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.leader-name-ar {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.leader-name-en {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* الإدارة والبرامج */
+.management-section,
+.programs-section {
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team-member-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.member-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member-card:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.member-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.member-title-en {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* معلومات الفريق */
+.team-info-section {
+    margin: 60px 0;
+}
+
+.team-info-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-title i {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+.info-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.expertise-title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expertise-list li {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.05), rgba(220, 36, 48, 0.02));
+    border-right: 4px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.expertise-list li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .page-header .main-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .leader-image,
+    .member-image {
+        height: 250px;
+    }
+
+    .team-info-card {
+        padding: 25px;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader-image {
+        height: 300px;
+    }
+
+    .member-image {
+        height: 250px;
+    }
+}
+
+/* ========================================
+   Contact Page Styles
+======================================== */
+.contact-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.contact-info-section {
+    margin-bottom: 50px;
+}
+
+.contact-info-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-channels-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-channels-table thead th {
+    background: var(--primary-color);
+    color: white;
+    padding: 18px;
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.contact-channels-table tbody td {
+    padding: 20px 18px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.contact-channels-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.contact-channels-table tbody td:first-child {
+    background: rgba(123, 67, 151, 0.05);
+    font-weight: 700;
+    color: var(--primary-color);
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-channels-table tbody td:first-child i {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+.contact-channels-table tbody td:last-child {
+    line-height: 1.8;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.contact-link i {
+    color: var(--primary-color);
+}
+
+.contact-link.whatsapp-link {
+    color: #25D366;
+    margin-top: 10px;
+}
+
+.contact-link.whatsapp-link:hover {
+    color: #128C7E;
+}
+
+.contact-link.whatsapp-link i {
+    color: #25D366;
+    font-size: 1.2rem;
+}
+
+.address-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.address-text i {
+    color: var(--primary-color);
+}
+
+.contact-note {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+}
+
+/* خريطة */
+.map-section {
+    margin: 50px 0;
+}
+
+.map-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.map-container {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    display: block;
+}
+
+.map-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-info-card,
+    .map-card {
+        padding: 25px;
+    }
+
+    .contact-channels-table {
+        font-size: 0.9rem;
+    }
+
+    .contact-channels-table thead th,
+    .contact-channels-table tbody td {
+        padding: 15px 12px;
+    }
+
+    .contact-channels-table tbody td:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-channels-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .contact-channels-table thead {
+        display: none;
+    }
+
+    .contact-channels-table tbody tr {
+        display: block;
+        margin-bottom: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .contact-channels-table tbody td {
+        display: block;
+        padding: 15px;
+        border-bottom: none;
+    }
+
+    .contact-channels-table tbody td:first-child {
+        background: var(--primary-color);
+        color: white;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .contact-channels-table tbody td:first-child i {
+        color: var(--accent-color);
+    }
+
+    .map-container iframe {
+        height: 300px;
+    }
+}
+
+/* ========================================
+   FAQ Page Styles
+======================================== */
+.faq-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.faq-search-section {
+    margin: 40px 0;
+}
+
+.faq-search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(123, 67, 151, 0.1);
+}
+
+.search-icon-input {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.faq-container {
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.faq-question {
+    padding: 25px 30px;
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, rgba(123, 67, 151, 0.15), rgba(220, 36, 48, 0.08));
+}
+
+.faq-question h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+    flex: 1;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 25px 30px;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    display: none;
+}
+
+.no-results.show {
+    display: block;
+}
+
+.no-results p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .faq-question {
+        padding: 20px;
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 20px;
+    }
+
+    .faq-search-input {
+        font-size: 1rem;
+        padding: 12px 45px 12px 15px;
+    }
+}
+
+/* ========================================
+   الإرشاد الأسري - تنسيقات مخصصة (مُستخدمة للمتغيرات)
+======================================== */
+
+/* تنسيق الحاوية الرئيسية */
+.container {
+    width: 90%;
+    max-width: 1000px; /* تم تعديل العرض ليتناسب مع محتوى المقالات */
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--bg-body-color);
+    box-shadow: var(--card-shadow); /* استخدام ظل البطاقة */
+    border-radius: 12px;
+}
+
+/* تنسيق العنوان الرئيسي */
+.container h1 {
+    color: var(--primary-color); /* اللون الأساسي */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 15px;
+    display: block;
+}
+
+/* رسالة ترحيبية أو وصفية */
+.intro-text {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    padding: 18px;
+    background-color: var(--bg-light); /* خلفية فاتحة */
+    border-radius: 8px;
+    border-right: 5px solid var(--secondary-color); /* شريط أحمر للتنبيه/التمييز */
+    color: var(--text-dark);
+}
+
+/* تنسيق قائمة المقالات */
+.article-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* تنسيق عنصر المقالة */
+.article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-body-color);
+    padding: 20px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.article-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color); /* إطار بلون مميز عند التمرير */
+}
+
+/* تنسيق المحتوى النصي للمقالة */
+.article-content {
+    flex-grow: 1;
+    padding-left: 20px; /* مسافة بين النص والزر */
+}
+
+.article-content h3 {
+    margin: 0 0 8px 0;
+    color: var(--primary-color); /* عنوان المقال باللون الأساسي */
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.article-content p {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* تنسيق زر التحميل */
+.download-btn {
+    background-color: var(--secondary-color); /* استخدام اللون الثانوي */
+    color: var(--text-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px; /* زر دائري أكثر جاذبية */
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; 
+    border: none;
+}
+
+.download-btn:hover {
+    background-color: #c71c26; /* تظليل أغمق للون الثانوي */
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
