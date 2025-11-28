@@ -615,29 +615,45 @@ document.addEventListener('DOMContentLoaded', function() {
             // على الموبايل فقط
             if (window.innerWidth <= 768) {
                 e.preventDefault(); // منع الرابط من الفتح
+                e.stopPropagation(); // منع إغلاق القائمة
                 
                 const parent = this.closest('.dropdown-menu-item');
                 const isActive = parent.classList.contains('active');
                 
-                // إغلاق كل القوائم المفتوحة
+                // إغلاق كل القوائم المفتوحة الأخرى
                 document.querySelectorAll('.dropdown-menu-item').forEach(item => {
-                    item.classList.remove('active');
+                    if (item !== parent) {
+                        item.classList.remove('active');
+                    }
                 });
                 
                 // فتح/إغلاق القائمة الحالية
-                if (!isActive) {
+                if (isActive) {
+                    parent.classList.remove('active');
+                } else {
                     parent.classList.add('active');
                 }
             }
         });
     });
     
-    // إغلاق القائمة عند الضغط خارجها
+    // إغلاق القائمة عند الضغط خارجها (لكن ليس على الروابط داخل القائمة)
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown-menu-item')) {
-            document.querySelectorAll('.dropdown-menu-item').forEach(item => {
-                item.classList.remove('active');
-            });
+        if (window.innerWidth <= 768) {
+            const clickedItem = e.target.closest('.dropdown-menu-item');
+            const clickedLink = e.target.closest('.dropdown-content a');
+            
+            // إذا تم الضغط على رابط داخل القائمة، اتركه يعمل
+            if (clickedLink) {
+                return;
+            }
+            
+            // إذا تم الضغط خارج القائمة المنسدلة، أغلقها
+            if (!clickedItem || !clickedItem.contains(e.target)) {
+                document.querySelectorAll('.dropdown-menu-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
         }
     });
 });
@@ -721,12 +737,80 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-            // Search Icon Click
+            // Search Icon Click - تفعيل البحث
             const searchIcon = document.querySelector('.search-icon');
             if (searchIcon) {
                 searchIcon.addEventListener('click', () => {
-                    alert('وظيفة البحث ستكون متاحة قريباً!');
-                    // يمكنك هنا إضافة نافذة بحث أو التوجيه لصفحة البحث
+                    // إنشاء نافذة البحث
+                    const searchOverlay = document.createElement('div');
+                    searchOverlay.className = 'search-overlay';
+                    searchOverlay.innerHTML = `
+                        <div class="search-modal">
+                            <div class="search-header">
+                                <h3 class="search-title">البحث</h3>
+                                <button class="search-close" aria-label="إغلاق">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="search-body">
+                                <input type="text" class="search-input" placeholder="ابحث عن..." autofocus>
+                                <button class="search-submit">
+                                    <i class="fas fa-search"></i> بحث
+                                </button>
+                            </div>
+                            <div class="search-results"></div>
+                        </div>
+                    `;
+                    document.body.appendChild(searchOverlay);
+                    
+                    // إغلاق النافذة
+                    const closeBtn = searchOverlay.querySelector('.search-close');
+                    const closeOverlay = () => {
+                        searchOverlay.remove();
+                    };
+                    closeBtn.addEventListener('click', closeOverlay);
+                    searchOverlay.addEventListener('click', (e) => {
+                        if (e.target === searchOverlay) closeOverlay();
+                    });
+                    
+                    // البحث
+                    const searchInput = searchOverlay.querySelector('.search-input');
+                    const searchSubmit = searchOverlay.querySelector('.search-submit');
+                    const searchResults = searchOverlay.querySelector('.search-results');
+                    
+                    const performSearch = () => {
+                        const query = searchInput.value.trim();
+                        if (query.length < 2) {
+                            searchResults.innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">أدخل كلمة بحث (حرفين على الأقل)</p>';
+                            return;
+                        }
+                        
+                        // محاكاة نتائج البحث (يمكن استبدالها بـ API حقيقي)
+                        const results = [
+                            { title: 'مجال السلوك والقيم', link: 'behavior.html', desc: 'تنمية السلوك والذوق والقيم' },
+                            { title: 'مجال المهارات المعرفية', link: 'cognitive.html', desc: 'التفكير والتحليل وحل المشكلات' },
+                            { title: 'مجال اللغة والتخاطب', link: 'language.html', desc: 'النمو اللغوي والتعبير والاتصال' },
+                            { title: 'مجال المهارات الأكاديمية', link: 'academic.html', desc: 'القراءة والكتابة والحساب' }
+                        ].filter(item => 
+                            item.title.includes(query) || item.desc.includes(query)
+                        );
+                        
+                        if (results.length === 0) {
+                            searchResults.innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">لا توجد نتائج</p>';
+                        } else {
+                            searchResults.innerHTML = results.map(item => `
+                                <a href="${item.link}" class="search-result-item">
+                                    <h4>${item.title}</h4>
+                                    <p>${item.desc}</p>
+                                </a>
+                            `).join('');
+                        }
+                    };
+                    
+                    searchSubmit.addEventListener('click', performSearch);
+                    searchInput.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') performSearch();
+                    });
                 });
             }
 document.addEventListener('DOMContentLoaded', () => {
