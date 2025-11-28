@@ -109,6 +109,39 @@ a:hover {
     font-size: 1.6rem;
 }
 
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    direction: rtl;
+}
+
+.hamburger-menu span {
+    width: 30px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
 /* Navigation Links */
 .nav-links {
     list-style: none;
@@ -361,6 +394,13 @@ a:hover {
     width: 80px;
     height: 80px;
     animation: bobbing 4s ease-in-out infinite;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.floating-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .floating-icon.top-right {
@@ -1004,8 +1044,38 @@ a:hover {
     }
     
     .cards-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .floating-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .pricing-cards-container {
+        flex-wrap: wrap;
+    }
+    
+    .payment-methods {
+        gap: 10px;
+    }
+    
+    .payment-method {
+        min-width: 120px;
+        max-width: 180px;
+    }
+}
+
+/* Tablet Portrait - تابلت عمودي */
+@media (max-width: 950px) and (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+    
+    .nav-links {
+        max-height: none !important;
+        padding: 0 !important;
     }
 }
 
@@ -1049,59 +1119,108 @@ a:hover {
     }
     
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         min-height: auto;
         padding: 10px 5%;
         direction: rtl;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    
+    .hamburger-menu {
+        display: flex;
+        order: 1;
     }
     
     .logo {
-        order: 1;
-        width: 100%;
+        order: 2;
+        flex: 1;
         justify-content: center;
         padding: 10px 0;
     }
     
     .logo img {
-        height: 80px;
-    }
-    
-    .nav-links {
-        order: 2;
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-        padding: 10px 0;
-        border-top: 1px solid var(--bg-light);
-    }
-    
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-links a {
-        display: block;
-        padding: 12px;
+        height: 70px;
     }
     
     .auth-group {
         order: 3;
-        width: 100%;
-        justify-content: center;
-        padding: 10px 0 20px 0;
+        width: auto;
+        justify-content: flex-start;
+        padding: 0;
     }
     
     .auth-buttons {
         flex-direction: row;
-        width: auto;
+        gap: 5px;
     }
     
     .btn-primary,
     .btn-secondary {
-        padding: 8px 12px;
-        font-size: 0.85rem;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .search-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .nav-links {
+        order: 4;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0;
+        border-top: none;
+        margin-top: 0;
+    }
+    
+    .nav-links.active {
+        max-height: 1000px;
+        padding: 15px 0;
+        border-top: 1px solid var(--bg-light);
+        margin-top: 10px;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: right;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 12px 20px;
+        border-radius: 0;
+        border-right: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+        border-right-color: var(--primary-color);
+        background-color: rgba(123, 67, 151, 0.1);
+    }
+    
+    .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: rgba(123, 67, 151, 0.05);
+        min-width: 100%;
+        display: none;
+        margin-top: 5px;
+        border-radius: 0;
+        border-right: 3px solid var(--primary-color);
+    }
+    
+    .dropdown-menu-item.active .dropdown-content {
+        display: block;
     }
     
     .hero-section {
@@ -1135,9 +1254,34 @@ a:hover {
         text-align: center;
     }
     
+    .floating-icons {
+        width: 100%;
+        left: 0;
+    }
+    
     .floating-icon {
         width: 50px;
         height: 50px;
+    }
+    
+    .floating-icon.top-right {
+        top: 5%;
+        right: 2%;
+    }
+    
+    .floating-icon.top-left {
+        top: 5%;
+        left: 2%;
+    }
+    
+    .floating-icon.bottom-right {
+        bottom: 5%;
+        right: 2%;
+    }
+    
+    .floating-icon.bottom-left {
+        bottom: 5%;
+        left: 2%;
     }
     
     .section-title {
@@ -1176,6 +1320,18 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+    
+    .floating-social {
+        left: 10px;
+        gap: 10px;
+        bottom: 25%;
+    }
+    
+    .floating-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
 }
 
 /* Small Mobile - موبايل صغير */
@@ -1201,17 +1357,45 @@ a:hover {
     }
     
     .logo img {
-        height: 70px;
+        height: 60px;
     }
     
     .contact-info {
         flex-direction: column;
         gap: 5px;
+        font-size: 0.7rem;
     }
     
     .floating-icon {
         width: 40px;
         height: 40px;
+    }
+    
+    .floating-icons {
+        display: none; /* إخفاء الأيقونات على الشاشات الصغيرة جداً */
+    }
+    
+    .floating-social {
+        left: 5px;
+        gap: 8px;
+        bottom: 20%;
+    }
+    
+    .floating-social a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.7rem;
+        padding: 5px 8px;
     }
 }
 
@@ -1254,6 +1438,16 @@ a:hover {
     transition: all 0.3s;
     text-align: center;
     background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-logo {
+    max-width: 80px;
+    max-height: 50px;
+    object-fit: contain;
 }
 
 .payment-method:hover {
@@ -1277,20 +1471,22 @@ a:hover {
     display: block;
 }
 
-.payment-method.vodafone i {
+.payment-method img.payment-logo {
+    margin-bottom: 8px;
+}
+
+.payment-method.vodafone i,
+.payment-method.vodafone .payment-logo {
     color: #e60000;
 }
 
-.payment-method.visa i {
+.payment-method.instapay i,
+.payment-method.instapay .payment-logo {
+    color: #0066cc;
+}
+
+.payment-method.credit-card i {
     color: #1a1f71;
-}
-
-.payment-method.mastercard i {
-    color: #eb001b;
-}
-
-.payment-method.mada i {
-    color: #00a651;
 }
 
 .payment-method label {

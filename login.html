@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | Login - منصة مصر التعليمية</title>
+
+    <!-- خطوط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Sign-In -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(123, 67, 151, 0.1), rgba(220, 36, 48, 0.05));
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-header {
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .login-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .login-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .login-tab {
+            flex: 1;
+            padding: 15px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: #666;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-family);
+        }
+
+        .login-tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        .login-form {
+            display: none;
+        }
+
+        .login-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            text-align: right;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: var(--font-family);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .forgot-password {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password a {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .btn-login:hover {
+            background: #6a3780;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(123, 67, 151, 0.4);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            color: #999;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+        }
+
+        .divider span {
+            padding: 0 15px;
+        }
+
+        .btn-google {
+            width: 100%;
+            padding: 15px;
+            background: white;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: var(--font-family);
+            margin-bottom: 20px;
+        }
+
+        .btn-google:hover {
+            border-color: #4285f4;
+            background: #f8f9fa;
+        }
+
+        .btn-google img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .signup-link a {
+            color: var(--primary-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+
+            .login-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .login-tabs {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .login-tab {
+                border-bottom: 1px solid #eee;
+                border-right: none;
+                text-align: right;
+            }
+
+            .login-tab.active {
+                border-bottom-color: #eee;
+                border-right: 3px solid var(--primary-color);
+            }
+        }
+
+        [dir="ltr"] .login-page {
+            direction: ltr;
+        }
+
+        [dir="ltr"] .form-group {
+            text-align: left;
+        }
+
+        [dir="ltr"] .forgot-password {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-container">
+            <div class="login-header">
+                <h1 class="login-title" data-translate="login-title">تسجيل الدخول</h1>
+                <p class="login-subtitle" data-translate="login-subtitle">مرحباً بك في منصة مصر التعليمية</p>
+            </div>
+
+            <div class="login-tabs">
+                <button class="login-tab active" data-tab="login" data-translate="tab-login">تسجيل الدخول</button>
+                <button class="login-tab" data-tab="signup" data-translate="tab-signup">إنشاء حساب</button>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="login-form active">
+                <div class="form-group">
+                    <label for="login-email" data-translate="email-label">البريد الإلكتروني</label>
+                    <input type="email" id="login-email" name="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="login-password" data-translate="password-label">كلمة المرور</label>
+                    <input type="password" id="login-password" name="password" required placeholder="••••••••">
+                </div>
+                <div class="forgot-password">
+                    <a href="#" class="forgot-link" data-translate="forgot-password">نسيت كلمة المرور؟</a>
+                </div>
+                <button type="submit" class="btn-login" data-translate="btn-login">تسجيل الدخول</button>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="login-form">
+                <div class="form-group">
+                    <label for="signup-name" data-translate="name-label">الاسم الكامل</label>
+                    <input type="text" id="signup-name" name="name" required placeholder="أدخل اسمك الكامل">
+                </div>
+                <div class="form-group">
+                    <label for="signup-email" data-translate="email-label">البريد الإلكتروني</label>
+                    <input type="email" id="signup-email" name="email" required placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password" data-translate="password-label">كلمة المرور</label>
+                    <input type="password" id="signup-password" name="password" required placeholder="••••••••">
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password" data-translate="confirm-password-label">تأكيد كلمة المرور</label>
+                    <input type="password" id="signup-confirm-password" name="confirmPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-login" data-translate="btn-signup">إنشاء حساب</button>
+            </form>
+
+            <div class="divider">
+                <span data-translate="divider-text">أو</span>
+            </div>
+
+            <button class="btn-google" id="google-signin-btn">
+                <i class="fab fa-google"></i>
+                <span class="google-text" data-translate="btn-google">تسجيل الدخول بحساب Google</span>
+            </button>
+
+            <div class="signup-link">
+                <span class="switch-text" data-translate="switch-login-text">ليس لديك حساب؟</span>
+                <a href="#" class="switch-link" data-translate="switch-login-link">إنشاء حساب جديد</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Translations for login page
+        const loginTranslations = {
+            ar: {
+                'login-title': 'تسجيل الدخول',
+                'login-subtitle': 'مرحباً بك في منصة مصر التعليمية',
+                'tab-login': 'تسجيل الدخول',
+                'tab-signup': 'إنشاء حساب',
+                'email-label': 'البريد الإلكتروني',
+                'password-label': 'كلمة المرور',
+                'name-label': 'الاسم الكامل',
+                'confirm-password-label': 'تأكيد كلمة المرور',
+                'forgot-password': 'نسيت كلمة المرور؟',
+                'btn-login': 'تسجيل الدخول',
+                'btn-signup': 'إنشاء حساب',
+                'btn-google': 'تسجيل الدخول بحساب Google',
+                'divider-text': 'أو',
+                'switch-login-text': 'ليس لديك حساب؟',
+                'switch-signup-text': 'لديك حساب بالفعل؟',
+                'switch-login-link': 'إنشاء حساب جديد',
+                'switch-signup-link': 'تسجيل الدخول',
+                'login-success': 'تم تسجيل الدخول بنجاح! جاري التوجيه...',
+                'signup-success': 'تم إنشاء الحساب بنجاح! جاري تسجيل الدخول...',
+                'password-mismatch': 'كلمات المرور غير متطابقة!',
+                'google-signin': 'جاري تسجيل الدخول بحساب Google...'
+            },
+            en: {
+                'login-title': 'Login',
+                'login-subtitle': 'Welcome to Egypt Education Platform',
+                'tab-login': 'Login',
+                'tab-signup': 'Sign Up',
+                'email-label': 'Email',
+                'password-label': 'Password',
+                'name-label': 'Full Name',
+                'confirm-password-label': 'Confirm Password',
+                'forgot-password': 'Forgot Password?',
+                'btn-login': 'Login',
+                'btn-signup': 'Sign Up',
+                'btn-google': 'Sign in with Google',
+                'divider-text': 'or',
+                'switch-login-text': "Don't have an account?",
+                'switch-signup-text': 'Already have an account?',
+                'switch-login-link': 'Create New Account',
+                'switch-signup-link': 'Login',
+                'login-success': 'Login successful! Redirecting...',
+                'signup-success': 'Account created successfully! Logging in...',
+                'password-mismatch': 'Passwords do not match!',
+                'google-signin': 'Signing in with Google...'
+            }
+        };
+
+        function updateLoginPageLanguage(lang) {
+            const t = loginTranslations[lang];
+            
+            // Update all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (t[key]) {
+                    el.textContent = t[key];
+                }
+            });
+            
+            // Update buttons
+            document.querySelector('#login-form .btn-login').textContent = t['btn-login'];
+            document.querySelector('#signup-form .btn-login').textContent = t['btn-signup'];
+            
+            // Update switch text based on active tab
+            const activeTab = document.querySelector('.login-tab.active').getAttribute('data-tab');
+            if (activeTab === 'login') {
+                document.querySelector('.switch-text').textContent = t['switch-login-text'];
+                document.querySelector('.switch-link').textContent = t['switch-login-link'];
+            } else {
+                document.querySelector('.switch-text').textContent = t['switch-signup-text'];
+                document.querySelector('.switch-link').textContent = t['switch-signup-link'];
+            }
+            
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = lang;
+        }
+
+        // Check for language preference
+        const savedLang = localStorage.getItem('preferred-language') || 'ar';
+        if (savedLang === 'en') {
+            updateLoginPageLanguage('en');
+        }
+
+        // Tab switching
+        const tabs = document.querySelectorAll('.login-tab');
+        const forms = document.querySelectorAll('.login-form');
+        const switchLink = document.querySelector('.switch-link');
+        const switchText = document.querySelector('.switch-text');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Update tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update forms
+                forms.forEach(f => f.classList.remove('active'));
+                document.getElementById(`${targetTab}-form`).classList.add('active');
+                
+                // Update switch link
+                const currentLang = document.documentElement.lang || 'ar';
+                const t = loginTranslations[currentLang];
+                if (targetTab === 'login') {
+                    switchText.textContent = t['switch-login-text'];
+                    switchLink.textContent = t['switch-login-link'];
+                } else {
+                    switchText.textContent = t['switch-signup-text'];
+                    switchLink.textContent = t['switch-signup-link'];
+                }
+            });
+        });
+
+        // Switch link functionality
+        switchLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const activeTab = document.querySelector('.login-tab.active').getAttribute('data-tab');
+            if (activeTab === 'login') {
+                document.querySelector('[data-tab="signup"]').click();
+            } else {
+                document.querySelector('[data-tab="login"]').click();
+            }
+        });
+
+        // Form submissions
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            // Simulate login (replace with actual API call)
+            const currentLang = document.documentElement.lang || 'ar';
+            const t = loginTranslations[currentLang];
+            showMessage(t['login-success'], 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+            
+            const currentLang = document.documentElement.lang || 'ar';
+            const t = loginTranslations[currentLang];
+            
+            if (password !== confirmPassword) {
+                showMessage(t['password-mismatch'], 'error');
+                return;
+            }
+            
+            // Simulate signup (replace with actual API call)
+            showMessage(t['signup-success'], 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        });
+
+        // Google Sign-In
+        document.getElementById('google-signin-btn').addEventListener('click', function() {
+            // Initialize Google Sign-In
+            if (typeof google !== 'undefined' && google.accounts) {
+                google.accounts.id.initialize({
+                    client_id: 'YOUR_GOOGLE_CLIENT_ID', // Replace with your Google Client ID
+                    callback: handleGoogleSignIn
+                });
+                google.accounts.id.prompt();
+            } else {
+                // Fallback: Simulate Google sign-in
+                const currentLang = document.documentElement.lang || 'ar';
+                const t = loginTranslations[currentLang];
+                showMessage(t['google-signin'], 'success');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            }
+        });
+
+        function handleGoogleSignIn(response) {
+            // Handle Google sign-in response
+            console.log('Google Sign-In successful:', response);
+            const currentLang = document.documentElement.lang || 'ar';
+            const t = loginTranslations[currentLang];
+            showMessage(t['login-success'], 'success');
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 1500);
+        }
+
+        function showMessage(text, type) {
+            const messageEl = document.getElementById('message');
+            messageEl.textContent = text;
+            messageEl.className = `message ${type}`;
+            messageEl.style.display = 'block';
+            
+            setTimeout(() => {
+                messageEl.style.display = 'none';
+            }, 5000);
+        }
+
+        // Disable right-click and F12
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123 || 
+                (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+                (e.ctrlKey && e.shiftKey && e.keyCode === 74) ||
+                (e.ctrlKey && e.keyCode === 85)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>
+

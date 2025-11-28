@@ -32,10 +32,17 @@
         </div>
         
         <nav class="navbar">
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" aria-label="القائمة">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <!-- الأزرار واللغة -->
             <div class="auth-group">
                 <div class="auth-buttons">
-                    <a href="#" class="btn-secondary auth-login">تسجيل الدخول</a>
+                    <a href="login.html" class="btn-secondary auth-login">تسجيل الدخول</a>
                     <a href="subscriptions.html" target="_blank" class="btn-primary auth-subscribe">اشترك الآن</a>
                 </div>
                                 <button class="search-icon" aria-label="بحث">
@@ -118,7 +125,7 @@
         <!-- الأيقونات الطائرة المحيطة -->
         <div class="floating-icons">
             <!-- أيقونة يمين فوق -->
-            <div class="floating-icon -right">
+            <div class="floating-icon top-right">
                 <img src="images/icon-1.png" alt="Icon 1">
             </div>
             
@@ -172,9 +179,9 @@
                 </p>
                 <div class="card-details">
                     <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
-                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: <span class="beneficiaries-count" data-card="behavior">0</span></span>
                 </div>
-                <a href="behavior.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="behavior.html" target="_blank" class="btn-card-more" data-card-link="behavior">المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
 
             <div class="course-card slide-up" style="--delay: 0.3s;">
@@ -187,9 +194,9 @@
                 </p>
                 <div class="card-details">
                     <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
-                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: <span class="beneficiaries-count" data-card="cognitive">0</span></span>
                 </div>
-                <a href="cognitive.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="cognitive.html" target="_blank" class="btn-card-more" data-card-link="cognitive">المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
 
             <div class="course-card slide-up" style="--delay: 0.5s;">
@@ -202,9 +209,9 @@
                 </p>
                 <div class="card-details">
                     <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
-                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: <span class="beneficiaries-count" data-card="language">0</span></span>
                 </div>
-                <a href="language.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="language.html" target="_blank" class="btn-card-more" data-card-link="language">المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
 
             <div class="course-card slide-up" style="--delay: 0.7s;">
@@ -217,9 +224,9 @@
                 </p>
                 <div class="card-details">
                     <span><i class="fas fa-graduation-cap"></i> عدد البرامج: 6</span>
-                    <span><i class="fas fa-users"></i> عدد المستفيدين: 9</span>
+                    <span><i class="fas fa-users"></i> عدد المستفيدين: <span class="beneficiaries-count" data-card="academic">0</span></span>
                 </div>
-                <a href="academic.html" target="_blank" class="btn-card-more">المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="academic.html" target="_blank" class="btn-card-more" data-card-link="academic">المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
     </section>
@@ -280,5 +287,35 @@
 
     <!-- JS -->
     <script src="script.js"></script>
+    <script>
+        // Disable right-click and F12
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Disable F12
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Developer Tools)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+Shift+J (Console)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>

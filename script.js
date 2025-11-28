@@ -1,57 +1,335 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ------------------------------------------
+    // 0. Hamburger Menu Functionality (قائمة الهامبرجر)
+    // ------------------------------------------
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburgerMenu && navLinks) {
+        hamburgerMenu.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburgerMenu.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+    
+    // ------------------------------------------
+    // 0.5. Beneficiaries Counter (عداد المستفيدين)
+    // ------------------------------------------
+    function formatNumber(num) {
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + 'k';
+        }
+        return num.toString();
+    }
+    
+    function updateCounter(element, targetValue) {
+        const currentValue = parseInt(element.textContent) || 0;
+        if (currentValue < targetValue) {
+            const increment = Math.ceil((targetValue - currentValue) / 20);
+            const newValue = Math.min(currentValue + increment, targetValue);
+            element.textContent = formatNumber(newValue);
+            setTimeout(() => updateCounter(element, targetValue), 50);
+        } else {
+            element.textContent = formatNumber(targetValue);
+        }
+    }
+    
+    // Load counters from localStorage or initialize
+    const cardLinks = document.querySelectorAll('[data-card-link]');
+    cardLinks.forEach(link => {
+        const cardType = link.getAttribute('data-card-link');
+        const countElement = document.querySelector(`[data-card="${cardType}"]`);
+        
+        if (countElement) {
+            // Get count from localStorage or initialize
+            let count = parseInt(localStorage.getItem(`card_${cardType}_count`)) || 0;
+            
+            // Increment count when link is clicked
+            link.addEventListener('click', function() {
+                count++;
+                localStorage.setItem(`card_${cardType}_count`, count.toString());
+                updateCounter(countElement, count);
+            });
+            
+            // Display current count
+            updateCounter(countElement, count);
+        }
+    });
+    
+    // ------------------------------------------
     // 1. Language Toggle Functionality (التحكم باللغة)
     // ------------------------------------------
 
     const langBtn = document.getElementById('lang-btn');
     const htmlElement = document.documentElement;
 
-    // (Add all translations here as needed for a fully translated site)
+    // Complete translations for the entire website
     const translations = {
-        // ... (Keep the structure from the previous response but extend it) ...
         ar: {
             'nav-home': 'الرئيسية',
             'nav-programs': 'برامج ابطالنا',
+            'nav-guidance': 'خدمات الأرشاد الأسري',
+            'nav-support': 'خدمات الدعم',
+            'nav-about': 'من نحن',
             'nav-subscriptions': 'الإشتراكات',
+            'nav-contact': 'تواصل معنا',
+            'nav-faq': 'س و ج',
+            'auth-login': 'تسجيل الدخول',
+            'auth-subscribe': 'اشترك الآن',
             'hero-title': 'منصة مصر التعليمية',
-            // ... (many more keys needed for full translation)
+            'hero-description': 'تسعى إلى بناء جيل متكامل في علمه وسلوكه، يمتلك مهارات التفكير والتحليل والاتصال، ويتسم بالأدب والاحترام والمسؤولية، جيل ينهل من العلم بوعي، ويكتسب الأخلاق بالسلوك، ليكون نموذجًا لـ "الجيل المستقبلي المصري الواعد ...',
+            'section-title': 'مجالات البرامج التعليمية',
+            'card-behavior-title': 'مجال السلوك والقيم',
+            'card-behavior-text': 'مجال تنمية السلوك، والذوق والقيم القائمة على المهارات من خلال تعليم المهارات السلوكية والاجتماعية التي تخدم دور الوالدين والمدارس وأيضاً القيم والذوق العام والتعاملات الاجتماعية.',
+            'card-cognitive-title': 'مجال تنمية المهارات المعرفية',
+            'card-cognitive-text': 'يهتم هذا المحور في تنمية المهارات الأكاديمية ومهارات التفكير والتحليل وحل المشكلات والقدرة على الفهم والاستيعاب، وإدارة الوقت والمهام.',
+            'card-language-title': 'مجال اللغة والتخاطب',
+            'card-language-text': 'يهتم هذا المحور على النمو اللغوي الصحيح والدقيق والقدرة على تنمية مهارات التعبير والاتصال والتواصل لدى أبنائنا.',
+            'card-academic-title': 'مجال المهارات الأكاديمية',
+            'card-academic-text': 'يهتم المحور الأكاديمي على النمو في الجانب التعليمي والمهني، أي تنمية مهارات التعليم والقراءة والكتابة والحساب والمواد التعليمية المختلفة.',
+            'card-programs': 'عدد البرامج:',
+            'card-beneficiaries': 'عدد المستفيدين:',
+            'card-more': 'المزيد',
+            'dropdown-behavior-title': 'مجال السلوك والقيم',
+            'dropdown-behavior-desc': 'تنمية السلوك والذوق والقيم',
+            'dropdown-cognitive-title': 'مجال المهارات المعرفية',
+            'dropdown-cognitive-desc': 'التفكير والتحليل وحل المشكلات',
+            'dropdown-language-title': 'مجال اللغة والتخاطب',
+            'dropdown-language-desc': 'النمو اللغوي والتعبير والاتصال',
+            'dropdown-academic-title': 'مجال المهارات الأكاديمية',
+            'dropdown-academic-desc': 'القراءة والكتابة والحساب',
+            'contact-email': 'E-mail: info@egyedu.com',
+            'contact-phone': 'Contact: 002 0123456789',
+            'contact-address': 'Address: Cairo, Egypt'
         },
         en: {
             'nav-home': 'Home',
             'nav-programs': 'Our Heroes Programs',
+            'nav-guidance': 'Family Guidance Services',
+            'nav-support': 'Support Services',
+            'nav-about': 'About Us',
             'nav-subscriptions': 'Subscriptions',
+            'nav-contact': 'Contact Us',
+            'nav-faq': 'FAQ',
+            'auth-login': 'Login',
+            'auth-subscribe': 'Subscribe Now',
             'hero-title': 'Egypt Education Platform',
-             // ... (many more keys needed for full translation)
+            'hero-description': 'We strive to build a generation that is complete in its knowledge and behavior, possessing skills of thinking, analysis and communication, characterized by politeness, respect and responsibility, a generation that draws from science consciously, and acquires ethics through behavior, to be a model for "the promising future Egyptian generation..."',
+            'section-title': 'Educational Program Areas',
+            'card-behavior-title': 'Behavior and Values Domain',
+            'card-behavior-text': 'A field for developing behavior, taste and values based on skills through teaching behavioral and social skills that serve the role of parents and schools, as well as values, public taste and social interactions.',
+            'card-cognitive-title': 'Cognitive Skills Development Domain',
+            'card-cognitive-text': 'This axis focuses on developing academic skills, thinking, analysis and problem-solving skills, and the ability to understand and comprehend, as well as time and task management.',
+            'card-language-title': 'Language and Communication Domain',
+            'card-language-text': 'This axis focuses on correct and accurate linguistic development and the ability to develop expression, communication and interaction skills in our children.',
+            'card-academic-title': 'Academic Skills Domain',
+            'card-academic-text': 'The academic axis focuses on growth in the educational and professional aspect, i.e., developing teaching skills, reading, writing, arithmetic and various educational materials.',
+            'card-programs': 'Number of Programs:',
+            'card-beneficiaries': 'Number of Beneficiaries:',
+            'card-more': 'More',
+            'dropdown-behavior-title': 'Behavior and Values Domain',
+            'dropdown-behavior-desc': 'Developing behavior, taste and values',
+            'dropdown-cognitive-title': 'Cognitive Skills Domain',
+            'dropdown-cognitive-desc': 'Thinking, analysis and problem solving',
+            'dropdown-language-title': 'Language and Communication Domain',
+            'dropdown-language-desc': 'Linguistic development, expression and communication',
+            'dropdown-academic-title': 'Academic Skills Domain',
+            'dropdown-academic-desc': 'Reading, writing and arithmetic',
+            'contact-email': 'E-mail: info@egyedu.com',
+            'contact-phone': 'Contact: 002 0123456789',
+            'contact-address': 'Address: Cairo, Egypt'
         }
     };
     
     const updateText = (lang) => {
-        // This function needs to be fully implemented to switch all texts
-        // Since the requirement is large, the structure is provided here.
-        // It updates text based on classes and IDs.
+        // Save language preference
+        localStorage.setItem('preferred-language', lang);
         
-        // Example implementation for few elements:
-        document.querySelectorAll('.nav-home').forEach(el => el.textContent = translations[lang]['nav-home']);
-        document.querySelectorAll('.hero-title').forEach(el => el.textContent = translations[lang]['hero-title']);
-        // ... continue for all elements ...
+        // Update all text elements
+        Object.keys(translations[lang]).forEach(key => {
+            const elements = document.querySelectorAll(`[data-translate="${key}"]`);
+            elements.forEach(el => {
+                el.textContent = translations[lang][key];
+            });
+            
+            // Also update by class names
+            const classElements = document.querySelectorAll(`.${key}`);
+            classElements.forEach(el => {
+                if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        });
+        
+        // Update specific elements by class
+        if (translations[lang]['nav-home']) {
+            document.querySelectorAll('.nav-home').forEach(el => el.textContent = translations[lang]['nav-home']);
+        }
+        if (translations[lang]['nav-programs']) {
+            document.querySelectorAll('.nav-programs').forEach(el => {
+                const arrow = el.querySelector('.dropdown-arrow');
+                if (arrow) {
+                    el.innerHTML = translations[lang]['nav-programs'] + ' ' + arrow.outerHTML;
+                } else {
+                    el.textContent = translations[lang]['nav-programs'];
+                }
+            });
+        }
+        if (translations[lang]['hero-title']) {
+            document.querySelectorAll('.hero-title').forEach(el => el.textContent = translations[lang]['hero-title']);
+        }
+        if (translations[lang]['hero-description']) {
+            document.querySelectorAll('.hero-description').forEach(el => el.textContent = translations[lang]['hero-description']);
+        }
+        if (translations[lang]['section-title']) {
+            document.querySelectorAll('.section-title').forEach(el => el.textContent = translations[lang]['section-title']);
+        }
+        if (translations[lang]['auth-login']) {
+            document.querySelectorAll('.auth-login').forEach(el => el.textContent = translations[lang]['auth-login']);
+        }
+        if (translations[lang]['auth-subscribe']) {
+            document.querySelectorAll('.auth-subscribe').forEach(el => el.textContent = translations[lang]['auth-subscribe']);
+        }
+        
+        // Update card titles and texts
+        const cardTitles = document.querySelectorAll('.card-title');
+        cardTitles.forEach((title, index) => {
+            const card = title.closest('.course-card');
+            if (card) {
+                const cardLink = card.querySelector('[data-card-link]');
+                if (cardLink) {
+                    const cardType = cardLink.getAttribute('data-card-link');
+                    const titleKey = `card-${cardType}-title`;
+                    if (translations[lang][titleKey]) {
+                        title.textContent = translations[lang][titleKey];
+                    }
+                    const textKey = `card-${cardType}-text`;
+                    const cardText = card.querySelector('.card-text');
+                    if (cardText && translations[lang][textKey]) {
+                        cardText.textContent = translations[lang][textKey];
+                    }
+                }
+            }
+        });
+        
+        // Update dropdown items
+        const dropdownItems = document.querySelectorAll('.dropdown-item-text');
+        dropdownItems.forEach(item => {
+            const strong = item.querySelector('strong');
+            const span = item.querySelector('span');
+            const link = item.closest('a');
+            if (link) {
+                if (link.href.includes('behavior.html')) {
+                    if (strong && translations[lang]['dropdown-behavior-title']) strong.textContent = translations[lang]['dropdown-behavior-title'];
+                    if (span && translations[lang]['dropdown-behavior-desc']) span.textContent = translations[lang]['dropdown-behavior-desc'];
+                } else if (link.href.includes('cognitive.html')) {
+                    if (strong && translations[lang]['dropdown-cognitive-title']) strong.textContent = translations[lang]['dropdown-cognitive-title'];
+                    if (span && translations[lang]['dropdown-cognitive-desc']) span.textContent = translations[lang]['dropdown-cognitive-desc'];
+                } else if (link.href.includes('language.html')) {
+                    if (strong && translations[lang]['dropdown-language-title']) strong.textContent = translations[lang]['dropdown-language-title'];
+                    if (span && translations[lang]['dropdown-language-desc']) span.textContent = translations[lang]['dropdown-language-desc'];
+                } else if (link.href.includes('academic.html')) {
+                    if (strong && translations[lang]['dropdown-academic-title']) strong.textContent = translations[lang]['dropdown-academic-title'];
+                    if (span && translations[lang]['dropdown-academic-desc']) span.textContent = translations[lang]['dropdown-academic-desc'];
+                }
+            }
+        });
+        
+        // Update card details
+        document.querySelectorAll('.card-details span').forEach(span => {
+            if (span.textContent.includes('عدد البرامج')) {
+                span.innerHTML = `<i class="fas fa-graduation-cap"></i> ${translations[lang]['card-programs']} 6`;
+            } else if (span.textContent.includes('عدد المستفيدين')) {
+                const countEl = span.querySelector('.beneficiaries-count');
+                if (countEl) {
+                    span.innerHTML = `<i class="fas fa-users"></i> ${translations[lang]['card-beneficiaries']} <span class="beneficiaries-count" data-card="${countEl.getAttribute('data-card')}">${countEl.textContent}</span>`;
+                }
+            }
+        });
+        
+        // Update "More" buttons
+        document.querySelectorAll('.btn-card-more').forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                btn.innerHTML = `${translations[lang]['card-more']} ${icon.outerHTML}`;
+            } else {
+                btn.textContent = translations[lang]['card-more'];
+            }
+        });
+        
+        // Update navigation links
+        if (translations[lang]['nav-guidance']) {
+            document.querySelectorAll('.nav-guidance').forEach(el => el.textContent = translations[lang]['nav-guidance']);
+        }
+        if (translations[lang]['nav-support']) {
+            document.querySelectorAll('.nav-support').forEach(el => el.textContent = translations[lang]['nav-support']);
+        }
+        if (translations[lang]['nav-about']) {
+            document.querySelectorAll('.nav-about').forEach(el => el.textContent = translations[lang]['nav-about']);
+        }
+        if (translations[lang]['nav-subscriptions']) {
+            document.querySelectorAll('.nav-subscriptions').forEach(el => el.textContent = translations[lang]['nav-subscriptions']);
+        }
+        if (translations[lang]['nav-contact']) {
+            document.querySelectorAll('.nav-contact').forEach(el => el.textContent = translations[lang]['nav-contact']);
+        }
+        if (translations[lang]['nav-faq']) {
+            document.querySelectorAll('.nav-faq').forEach(el => el.textContent = translations[lang]['nav-faq']);
+        }
         
         // Update direction
         htmlElement.dir = (lang === 'ar' ? 'rtl' : 'ltr');
         // Update language attribute
         htmlElement.lang = lang;
+        
+        // Update page title
+        if (lang === 'en') {
+            document.title = 'Egypt Education Platform | EDU Platform';
+        } else {
+            document.title = 'منصة مصر التعليمية | EDU Platform';
+        }
     };
+    
+    // Load saved language preference
+    const savedLang = localStorage.getItem('preferred-language') || 'ar';
+    if (savedLang === 'en') {
+        updateText('en');
+        if (langBtn) {
+            langBtn.textContent = 'AR';
+        }
+    }
 
 
     if (langBtn) {
         langBtn.addEventListener('click', () => {
-            const currentLang = htmlElement.lang === 'ar' ? 'ar' : 'en';
+            const currentLang = htmlElement.lang || 'ar';
             const newLang = currentLang === 'ar' ? 'en' : 'ar';
             
-            langBtn.textContent = newLang.toUpperCase();
+            langBtn.textContent = newLang === 'ar' ? 'EN' : 'AR';
             langBtn.setAttribute('aria-label', `Toggle language to ${newLang === 'ar' ? 'Arabic' : 'English'}`);
             updateText(newLang);
         });
+        
+        // Set initial button text
+        const currentLang = htmlElement.lang || 'ar';
+        langBtn.textContent = currentLang === 'ar' ? 'EN' : 'AR';
     }
 
     // ------------------------------------------
@@ -151,7 +429,9 @@ paymentMethods.forEach(method => {
         const selectedMethod = radio.value;
         if (selectedMethod === 'vodafone') {
             document.getElementById('vodafone-details').classList.add('active');
-        } else if (['visa', 'mastercard', 'mada'].includes(selectedMethod)) {
+        } else if (selectedMethod === 'instapay') {
+            document.getElementById('instapay-details').classList.add('active');
+        } else if (selectedMethod === 'credit-card') {
             document.getElementById('card-details').classList.add('active');
         }
     });
@@ -249,7 +529,22 @@ if (registrationForm) {
                 formMessage.style.display = 'block';
                 isValid = false;
             }
-        } else {
+        } else if (paymentMethod === 'instapay') {
+            const instapayNumber = document.getElementById('instapay-number').value;
+            const instapayPin = document.getElementById('instapay-pin').value;
+            
+            if (!instapayNumber || instapayNumber.length < 11) {
+                formMessage.textContent = '⚠️ يرجى إدخال رقم انستا باي صحيح (11 رقم)';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                isValid = false;
+            } else if (!instapayPin || instapayPin.length !== 4) {
+                formMessage.textContent = '⚠️ يرجى إدخال كود التأكيد (4 أرقام)';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                isValid = false;
+            }
+        } else if (paymentMethod === 'credit-card') {
             const cardNumber = document.getElementById('card-number').value.replace(/\s/g, '');
             const cardName = document.getElementById('card-name').value;
             const cardExpiry = document.getElementById('card-expiry').value;
